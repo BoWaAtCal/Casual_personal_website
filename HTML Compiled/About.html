@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Bo Wang</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #f9f9fb;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .full-width-header {
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e3e3e3;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .welcome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      font-weight: 500;
+      font-style: italic;
+      color: #444c56;
+      letter-spacing: 0.5px;
+    }
+
+    .nav {
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav a,
+    .nav i {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #5f6c7b;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      letter-spacing: 1px;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav i {
+      font-size: 1.4em;
+      vertical-align: middle;
+    }
+
+    .nav a:hover,
+    .nav i:hover {
+      color: #1d3557;
+    }
+
+    h1.title {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 700;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #fff1ec, #f9f9fb);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 60px 0;
+      gap: 40px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .section.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border: 2px solid #f2f2f2;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+      border-color: #ffa07a;
+    }
+
+    .section p {
+      flex: 1;
+      font-size: 1.45em;
+      line-height: 1.75;
+      color: #3b4450;
+      background-color: #ffffff;
+      padding: 25px 30px;
+      border-left: 6px solid #ffa07a;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    @media screen and (max-width: 900px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .section img {
+        width: 100%;
+      }
+
+      .section p {
+        margin-top: 20px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="full-width-header">
+    <div class="container header">
+      <div class="welcome">Welcome to my page!</div>
+      <div class="nav">
+        <a href="PersonalWebsite.html">Home</a>
+        <a href="About.html">About Me</a>
+        <a href="Experiences.html">Experiences</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/bowang1002/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/itsbowang_/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title">❓ Me Beyond the Resume</h1>
+
+  <!-- SECTION 1 -->
+  <div class="container section">
+    <img src="./images/warabi_japan.jpg" alt="Cultural background photo" />
+    <p>
+      I was born in 2006 to Chinese parents in Warabi, the smallest city by land area in Japan 🇯🇵, allowing me to engage with aspects of both Chinese and Japanese cultures on a deeply personal level within the tight-knit community. (did take forever to get to Tokyo though)
+    </p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="container section">
+    <img src="./images/bayern_munich.jpg" alt="Playing soccer or video games" />
+    <p>
+      I've been playing soccer at the varsity/intramural level for the past 8 years, primarily as a goalkeeper 🧤 and striker. I also greatly enjoy listening to C/J/K-pop music as well as learning about novel domains including ancient history 🏛️, cognition, and such.
+    </p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="container section">
+    <img src="./images/child.jpg" alt="Studying statistics or data science" />
+    <p>
+      Personally, I've been invested in numerous domains outside of the scope of traditional software and data, including an economics research project that attempts to predict Asian GDP growth 📊, a podcast that records stories and experiences in rural Japan, and the "Bright Star" initiative in China aimed at integrating those with autism 🧸 into the local community. 
+    </p>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
+

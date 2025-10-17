@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Bo Wang</title>
+
+  <!-- fonts and icons (including JS-linked email button) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f9f9fb, #f0f4ff);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .wave {
+      width: 100vw;
+      height: 120px;
+      display: block;
+      margin-top: -5px;
+    }
+
+    .full-width-header {
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e3e3e3;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 30px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .welcome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      font-weight: 500;
+      font-style: italic;
+      color: #444c56;
+      letter-spacing: 0.5px;
+    }
+
+    .nav {
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav a,
+    .nav i {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #5f6c7b;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      letter-spacing: 1px;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav i {
+      font-size: 1.4em;
+      vertical-align: middle;
+    }
+
+    .nav a:hover,
+    .nav i:hover {
+      color: #1d3557;
+    }
+
+    h1.title {
+      text-align: center;
+      font-size: 3.2em;
+      font-weight: 700;
+      margin: 80px auto 40px;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #fff1ec, #f9f9fb);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      max-width: 900px;
+    }
+
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px 80px;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .gif-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .gif-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-text {
+      font-size: 1.5em;
+      line-height: 1.8;
+      color: #4e5d6c;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .color-pop-button {
+      padding: 14px 28px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #FFA07A, #990462);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .color-pop-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .email-link {
+      color: #1d3557;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 800px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav a,
+      .nav i {
+        margin: 10px;
+      }
+
+      .main-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .text-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="full-width-header">
+    <div class="container header">
+      <div class="welcome">Welcome to my page!</div>
+      <div class="nav">
+        <a href="PersonalWebsite.html">Home</a>
+        <a href="About.html">About Me</a>
+        <a href="Experiences.html">Experiences</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/bowang1002/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/itsbowang_/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title">📬 Contact Me</h1>
+
+  <div class="main-content">
+    <div class="gif-container">
+      <img src="./images/night_coder.jpg" alt="Feel free to reach out!">
+    </div>
+    <div class="text-content">
+      <div class="contact-text">
+        Thank you for visiting my website!<br />
+        If you have any additional questions, please contact me at <strong>510-918-4892</strong> or send me an email through the link below!
+      </div>
+      <button id="fun-button" class="color-pop-button">Interested? Click Me!</button>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ff866e" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,101.3C480,85,600,75,720,85.3C840,96,960,128,1080,138.7C1200,149,1320,139,1380,133.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+  </svg>
+
+  <!-- email pop-up message that redirects user to direct sending  -->
+  <div id="email-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-box">
+      <p>Want to reach out to me?</p>
+      <a href="mailto:bo.wang@berkeley.edu" class="email-link">📧 Send me an email</a>
+      <br><br>
+      <button id="close-popup" class="color-pop-button">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="links.js"></script>
+</body>
+</html>
+
+
+
+

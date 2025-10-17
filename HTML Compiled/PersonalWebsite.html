@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bo Wang - Personal Website</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #f9f9fb;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .blob-left {
+      position: absolute;
+      top: -100px;
+      left: -200px;
+      z-index: 0;
+      width: 600px;
+      height: auto;
+      opacity: 0.35;
+    }
+
+    .full-width-header {
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e3e3e3;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 30px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .welcome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      font-weight: 500;
+      font-style: italic;
+      color: #444c56;
+      letter-spacing: 0.5px;
+    }
+
+    .nav {
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav a,
+    .nav i {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #5f6c7b;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      letter-spacing: 1px;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav i {
+      font-size: 1.4em;
+      vertical-align: middle;
+    }
+
+    .nav a:hover,
+    .nav i:hover {
+      color: #1d3557;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 30px;
+      box-sizing: border-box;
+    }
+
+    .text-container {
+      flex: 1;
+      text-align: left;
+      padding-left: 25px;
+      padding-right: 20px;
+      border-left: 4px solid #d3d3d3;
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+
+    .image-container::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle at center, #ddeeff, #f9f9fb);
+      border-radius: 50%;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(60px);
+    }
+
+    .image-container img {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 0.3em;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 1.6em;
+      line-height: 1.6;
+      color: #4e5d6c;
+    }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .content,
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-container {
+        border-left: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 40px;
+      }
+
+      .image-container {
+        justify-content: center;
+      }
+
+      .nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav a,
+      .nav i {
+        margin: 10px;
+      }
+
+      .blob-left {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <svg class="blob-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#FFA07A" d="M48.3,-69.4C59.1,-58.7,62.7,-39.9,67.6,-22.2C72.5,-4.5,78.7,12.1,73.7,24.3C68.7,36.5,52.5,44.2,37.7,53.3C22.8,62.4,9.4,72.9,-3.7,77.2C-16.9,81.5,-33.7,79.5,-42.4,69.6C-51.1,59.7,-51.8,41.9,-60.6,26.7C-69.4,11.5,-86.3,-1.2,-83.5,-10.5C-80.7,-19.7,-58.3,-25.4,-42.8,-35.1C-27.2,-44.8,-18.6,-58.5,-4.5,-63.7C9.7,-69,19.3,-65.7,48.3,-69.4Z" transform="translate(100 100)" />
+  </svg>
+
+  <div class="full-width-header">
+    <div class="container header">
+      <div class="welcome">Welcome to my page!</div>
+      <div class="nav">
+        <a href="PersonalWebsite.html">Home</a>
+        <a href="About.html">About Me</a>
+        <a href="Experiences.html">Experiences</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/bowang1002/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/itsbowang_/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container content">
+    <div class="text-container">
+      <h1>👋 Hi, I’m Bo Wang.</h1>
+      <p>I'm currently an CS + DS undergrad at UC Berkeley passionate about creating real-world impact through <strong>software engineering</strong> and <strong>data science.</strong></p>
+      <p>Having grown up across diverse cultural and academic backgrounds, I'm especially interested in contributing to <strong>context-aware, human-centered</strong> projects through tech.  </p>
+    </div>
+    <div class="image-container">
+      <img src="./images/Bo_by_the_sea.jpeg" alt="A picture of me!">
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
